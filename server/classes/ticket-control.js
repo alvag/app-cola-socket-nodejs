@@ -56,8 +56,6 @@ class TicketControl {
             this.lastTickets.pop();
         }
 
-        console.log(this.lastTickets);
-
         this.writeJsonFile();
 
         return attendTicket;

@@ -26,5 +26,7 @@ io.on('connection', (client) => {
         }
 
         callback(ticketControl.attendTicket(data.desktop));
+
+        client.broadcast.emit('lastTickets', ticketControl.getLastTickets());
     });
 });

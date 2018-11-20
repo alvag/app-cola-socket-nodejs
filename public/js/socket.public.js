@@ -17,6 +17,12 @@ socket.on('currentTicket', (response) => {
     updateView(response.lastTickets);
 });
 
+socket.on('lastTickets', (response) => {
+    let audio = new Audio('../audio/new-ticket.mp3');
+    audio.play();
+    updateView(response);
+});
+
 const updateView = (lastTickets) => {
     lastTickets.forEach((ticket, i) => {
         lblTickets[i].text(`Ticket ${ticket.number}`);
