@@ -1,5 +1,5 @@
 {
-    "name": "app-cola-socket-nodejs",
+    "name": "app-tickets-socket-nodejs",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
@@ -8,7 +8,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/alvag/app-cola-socket-nodejs.git"
+        "url": "git+https://github.com/alvag/app-tickets-socket-nodejs.git"
     },
     "author": "Max Alva",
     "license": "ISC",
