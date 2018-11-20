@@ -13,9 +13,9 @@ class TicketControl {
         let jsonData = require('../data/data.json');
 
         if (jsonData.today === this.today) {
-            this.last = jsonData.last;
-            this.tickets = jsonData.tickets;
-            this.lastTickets = jsonData.lastTickets;
+            this.last = jsonData.last || 0;
+            this.tickets = jsonData.tickets || [];
+            this.lastTickets = jsonData.lastTickets || [];
         } else {
             this.resetCount();
         }

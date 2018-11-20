@@ -15,4 +15,15 @@ io.on('connection', (client) => {
     client.emit('currentTicket', {
         currentTicket: ticketControl.currentTicket()
     });
+
+    client.on('attendTicket', (data, callback) => {
+        if (!data.desktop) {
+            return callback({
+                error: true,
+                messaje: 'El escritorio es requerido'
+            });
+        }
+
+        callback(ticketControl.attendTicket(data.desktop));
+    });
 });
