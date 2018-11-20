@@ -15,3 +15,7 @@ $('#newTicket').on('click', () => {
         lblNextTicket.text(nextTicket);
     });
 });
+
+socket.on('currentTicket', (response) => {
+    lblNextTicket.text(response.currentTicket);
+});

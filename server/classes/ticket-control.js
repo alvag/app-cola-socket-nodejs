@@ -22,6 +22,10 @@ class TicketControl {
         return `Ticket ${this.last}`;
     }
 
+    currentTicket() {
+        return `Ticket ${this.last}`;
+    }
+
     resetCount() {
         this.last = 0;
         this.writeJsonFile();

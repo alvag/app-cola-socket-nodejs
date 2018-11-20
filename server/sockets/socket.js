@@ -11,4 +11,8 @@ io.on('connection', (client) => {
 
         callback(nextTicket);
     });
+
+    client.emit('currentTicket', {
+        currentTicket: ticketControl.currentTicket()
+    });
 });
