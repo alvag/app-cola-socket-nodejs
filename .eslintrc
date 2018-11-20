@@ -21,6 +21,8 @@
         ],
         "no-console": "warn",
         "no-var": "warn",
-        "eqeqeq": "error"
+        "eqeqeq": "error",
+        "no-undef": "off",
+        "no-unused-vars": "warn"
     }
 }

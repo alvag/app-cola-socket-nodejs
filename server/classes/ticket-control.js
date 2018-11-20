@@ -29,7 +29,7 @@ class TicketControl {
 
     writeJsonFile() {
         let jsonDataString = JSON.stringify({
-            last: 0,
+            last: this.last,
             today: this.today
         });
         fs.writeFileSync('./server/data/data.json', jsonDataString);
