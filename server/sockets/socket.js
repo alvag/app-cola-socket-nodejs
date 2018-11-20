@@ -13,7 +13,8 @@ io.on('connection', (client) => {
     });
 
     client.emit('currentTicket', {
-        currentTicket: ticketControl.currentTicket()
+        currentTicket: ticketControl.currentTicket(),
+        lastTickets: ticketControl.getLastTickets()
     });
 
     client.on('attendTicket', (data, callback) => {

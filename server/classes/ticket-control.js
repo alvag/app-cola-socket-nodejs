@@ -36,6 +36,10 @@ class TicketControl {
         return `Ticket ${this.last}`;
     }
 
+    getLastTickets() {
+        return this.lastTickets;
+    }
+
     attendTicket(desktop) {
         if (this.tickets.length === 0) {
             return 'No hay tickets';
@@ -48,9 +52,11 @@ class TicketControl {
 
         this.lastTickets.unshift(attendTicket);
 
-        if (this.lastTickets > this.limitLast) {
+        if (this.lastTickets.length > this.limitLast) {
             this.lastTickets.pop();
         }
+
+        console.log(this.lastTickets);
 
         this.writeJsonFile();
 
@@ -58,6 +64,7 @@ class TicketControl {
     }
 
     resetCount() {
+        console.log('Reset Tickets');
         this.last = 0;
         this.tickets = [];
         this.lastTickets = [];
